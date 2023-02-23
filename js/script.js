@@ -16,7 +16,8 @@ let travelTime;
 
 let nameOutput = document.getElementById("name-pass");
 let distancePass = document.getElementById("distance-pass");
-let pricePass = document.getElementById("price-pass")
+let pricePass = document.getElementById("price-pass");
+let train = document.getElementById("train")
 
 
 
@@ -85,6 +86,11 @@ btnTicketGen.addEventListener("click", function(){
         nameOutput.innerHTML = userName.value;
         distancePass.innerHTML = userDistance.value + " km";
         pricePass.innerHTML = ticketPrice.toFixed(2) + " euro";
+
+        train.classList.add("train-animation-class");
+        setTimeout(function(){
+            train.classList.remove("train-animation-class")
+        }, 5000)
 
     } else {
         output.innerHTML = "Inserisci le informazioni necessarie ed esegui il calcolo del biglietto"

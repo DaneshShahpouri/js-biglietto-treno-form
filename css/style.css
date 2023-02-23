@@ -149,6 +149,133 @@ Fine Input */
 /* ----------------------------------
 Ticket */
 
+/* TRAIN 
+----------------------------------------*/
+.hidden{
+    overflow: hidden;
+}
+
+.train-wrapper{
+    position: relative;
+    left:0; top:0;
+}
+
+.train{
+    position: absolute;
+    top:0px; left:-1000px;
+}
+
+/* LOCOMOTIVA */
+.testa-locomotiva{
+    position: absolute;
+    left:300px
+}
+
+.locomotiva{
+    position: absolute;
+    top:40px; left:20px;
+    width: 160px;
+    height: 90px;
+    background: black;
+    border-radius: 10px 60px 20px 10px;
+}
+
+.finestrino{
+    position: absolute;
+    top:10px; left:20px;
+    width: 45px;
+    height: 30px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.finestrino-2{
+    position: absolute;
+    top:10px; left:80px;
+    width: 70px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px 40px 10px 10px;
+}
+
+.camino{
+    position: absolute;
+    top:-40px; left:100px;
+    width: 30px;
+    height: 50px;
+    background: black;
+}
+
+.ruote-locomotiva{
+    position: absolute;
+    top: 115px;
+    left: 20px;
+}
+
+.ruota{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background: black;
+    border-radius: 50%;
+}
+
+.ruota.ruota-2{
+    left:55px
+}
+
+.ruota.ruota-3{
+    left:100px
+}
+
+/* vagone */
+.vagone-1{
+    position: absolute;
+    left:135px
+}
+
+.vagone-2{
+    position: absolute;
+    left:-30px
+}
+
+.corpo-vagone{
+    position: absolute;
+    top:40px; left:20px;
+    width: 160px;
+    height: 90px;
+    background: black;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.finestrino-vagone-1{
+    left:5px
+}
+
+.finestrino-vagone-2{
+    left:55px;
+}
+
+.finestrino-vagone-3{
+    left:105px;
+}
+
+.train-animation-class{
+    animation: train-animation 10s;
+}
+
+@keyframes train-animation{
+    0%{
+        left:-600px;  
+    }
+
+    100%{
+        left:1000px;
+    }
+}
+
 
 @media screen and (max-width: 600px){
     .container{
