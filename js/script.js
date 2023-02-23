@@ -79,12 +79,12 @@ btnDistance.addEventListener("click", function(){
 })
 
 btnTicketGen.addEventListener("click", function(){
-
-    if(userDistance.value > 0 && userName.value != null && userAge.value > 0 && ticketPrice != undefined){
+    
+    if(userDistance.value > 0 && userName.value.length > 0 && userAge.value > 0 && ticketPrice != undefined){
         
         nameOutput.innerHTML = userName.value;
         distancePass.innerHTML = userDistance.value + " km";
-        pricePass.innerHTML = ticketPrice + " euro";
+        pricePass.innerHTML = ticketPrice.toFixed(2) + " euro";
 
     } else {
         output.innerHTML = "Inserisci le informazioni necessarie ed esegui il calcolo del biglietto"
