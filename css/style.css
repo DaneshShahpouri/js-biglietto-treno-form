@@ -57,7 +57,7 @@ COMMONS */
     align-items: start;
     justify-content: center;
     gap: 20px;
-    background-color: rgb(216, 196, 196);
+    background-color: rgb(255, 255, 255);
 }
 
 #logo{
@@ -92,9 +92,10 @@ Fine Input */
 .container{
     width: 100vw;
     height: 100vh;
-    background: rgb(234, 234, 234);
+    background: rgb(255, 191, 0);
     display: flex;
 
+    gap: 3px;
     align-items: center;
     justify-content: center;
 
@@ -103,23 +104,59 @@ Fine Input */
 .container .ticket-wrapper{
     width:60%;
     height: 100%;
-    background: #ebebeb;
+    background: #e1e1e1;
     padding: 10px 20px;  
-  
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: stretch;
 }
 
+.ticket{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+
+    height: 30%;
+    margin-top:1em;
+
+    background: white;
+    padding: 10px;
+}
+
+.name-pass-wrapper{
+    display: flex;
+    flex-flow: column;
+}
+
+.info-container{
+    display: flex;
+    justify-content: space-around;
+}
 /* BG-button */
 .bg-red{
-    background: rgb(177, 57, 85);
+    background: rgb(199, 30, 30);
 }
 
 .bg-green{
-    background: rgb(29, 60, 34);
+    background: rgb(18, 121, 37);
 }
 
 .bg-blue{
-    background: rgb(189, 157, 16);
+    background: rgb(198, 164, 15);
 }
 
 /* ----------------------------------
 Ticket */
+
+
+@media screen and (max-width: 600px){
+    .container{
+        flex-direction: column;
+    }
+
+    .input-side,
+    .container .ticket-wrapper{
+        width: 100%;
+    }
+}

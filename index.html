@@ -20,7 +20,7 @@
         <div class="input-side">
 
             <div class="logo">
-                
+
                 <img id="logo" src="img/logo.jpg" alt="logo">
     
                 <h1>Il tuo Biglietto:</h1>
@@ -30,6 +30,8 @@
             <div class="input-container">
                 
                 <div class="calc-price-input">
+                    
+                    <input id="user-name" type="text" placeholder="Nome e Cognome">
                     
                     <input id="user-distance" type="number" placeholder="Km da percorrere?">
         
@@ -42,7 +44,7 @@
     
                 <input id="btn-distance" type="button" class="btn bg-green" value="Calcola il tempo del viaggio">
     
-                <input id="btn-ticket-generator" type="button" class="btn bg-blue" value="Genera Biglietto Personalizzato">
+                <input id="btn-ticket-generator" type="button" class="btn bg-blue" value="Stampa Biglietto">
     
             </div>
         
@@ -51,7 +53,40 @@
 
         <div class="ticket-wrapper">
 
-            <h2 id="output">Il tuo biglietto costa</h2>
+            <h5 id="output">Il tuo biglietto costa</h5>
+            <h5 id="output-time">Il tuo viaggio durerà</h5>
+
+            <div class="ticket hidden">
+
+                <h2>Dettagli Biglietto</h2>
+
+                <div class="info-container">
+
+                    <div class="name-pass-wrapper">
+    
+                        <h5>Nome Passeggero:</h5>
+                        <h4 id="name-pass"></h4>
+    
+                    </div>
+
+
+                    <div class="travel-distance">
+
+                        <h6>Distanza</h6>
+                        <h4 id="distance-pass"></h4>
+
+                    </div>
+
+                    <div class="travel-cost">
+
+                        <h5>Costo</h5>
+                        <h4 id="price-pass"></h4>
+
+                    </div>
+
+                </div>
+  
+            </div>
 
         </div>
 
