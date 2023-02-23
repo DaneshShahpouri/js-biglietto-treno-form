@@ -14,6 +14,48 @@
     <title>Biglietto Treno Form</title>
 </head>
 <body>
+
+    <div class="container">
+
+        <div class="input-side">
+
+            <div class="logo">
+                
+                <img id="logo" src="img/logo.jpg" alt="logo">
+    
+                <h1>Il tuo Biglietto:</h1>
+
+            </div>
+    
+            <div class="input-container">
+                
+                <div class="calc-price-input">
+                    
+                    <input id="user-distance" type="number" placeholder="Km da percorrere?">
+        
+                    <input id="user-age" type="number" placeholder="età?">
+        
+                </div>
+    
+                <!-- buttons -->
+                <input id="btn-ticket-price" type="button" class="btn bg-red" value="Calcola il prezzo del biglietto">
+    
+                <input id="btn-distance" type="button" class="btn bg-green" value="Calcola il tempo del viaggio">
+    
+                <input id="btn-ticket-generator" type="button" class="btn bg-blue" value="Genera Biglietto Personalizzato">
+    
+            </div>
+        
+        </div>
+
+
+        <div class="ticket-wrapper">
+
+            <h2 id="output">Il tuo biglietto costa</h2>
+
+        </div>
+
+    </div>
     
 
     <script type="text/javascript" src="js/script.js"></script>
