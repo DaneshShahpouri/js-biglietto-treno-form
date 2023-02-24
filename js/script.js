@@ -1,22 +1,24 @@
+// Variabili di input e risultati
 let userName = document.getElementById("user-name");
 let userDistance = document.getElementById("user-distance");
 let userAge = document.getElementById("user-age");
 let output = document.getElementById("output");
 let outputTime = document.getElementById("output-time");
 
+// Bottoni
 let btnPrice =  document.getElementById("btn-ticket-price");
 let btnDistance =  document.getElementById("btn-distance");
 let btnTicketGen =  document.getElementById("btn-ticket-generator");
 let btnUndo = document.getElementById("btn-undo");
 
-
+// Variabili per calcoli
 let ticketPrice;
 let ticketTeen;
-let TicketOld;
+let ticketOld;
 let ticketDiscount;
-
 let travelTime;
 
+// Variabili biglietto
 let nameOutput = document.getElementById("name-pass");
 let distancePass = document.getElementById("distance-pass");
 let pricePass = document.getElementById("price-pass");
@@ -24,13 +26,13 @@ let train = document.getElementById("train")
 
 
 
-
+//Calcola Prezzo
 btnPrice.addEventListener("click", function(){
     if(userDistance.value <= 0){
         output.innerHTML = "per favore inserisci un valore superiore allo zero nel campo della distanza"
         userDistance.style.border = "1px solid red"
 
-    }else if( userAge.value <= 0){
+    }else if(userAge.value <= 0){
         output.innerHTML = "per favore inserisci la tua età";
         userAge.style.border = "1px solid red";
         userDistance.style.borderColor = "transparent";
@@ -59,9 +61,10 @@ btnPrice.addEventListener("click", function(){
         output.innerHTML = `Il tuo biglietto costa ${ticketPrice.toFixed(2)} euro`
     };
 
-  
 });
 
+
+// Calcola Tempo Viaggio
 btnDistance.addEventListener("click", function(){
     if(userDistance.value <= 0){
         output.innerHTML = "per favore inserisci un valore superiore allo zero nel campo della distanza"
@@ -82,6 +85,8 @@ btnDistance.addEventListener("click", function(){
     }
 })
 
+
+// Stampa Biglietto
 btnTicketGen.addEventListener("click", function(){
     
     if(userDistance.value > 0 && userName.value.length > 0 && userAge.value > 0 && ticketPrice != undefined){
@@ -100,6 +105,8 @@ btnTicketGen.addEventListener("click", function(){
     }
 })
 
+
+// Annulla e reset
 btnUndo.addEventListener("click", function(){
     nameOutput.innerHTML = "Nome e Cognome";
     distancePass.innerHTML = "Km";

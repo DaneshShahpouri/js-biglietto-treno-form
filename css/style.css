@@ -10,10 +10,6 @@ h1{
     display: inline-block;
 }
 
-.ticket-wrapper> h5{
-    color: white;
-}
-
 h4{
     color: rgb(173, 11, 37);
 }
@@ -24,10 +20,10 @@ h4{
     color: rgb(214, 214, 214);
     border: 1px solid transparent;
     cursor: pointer;
-   
+    
     font-weight: 600;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0);
-
+    
     padding:20px 0;
     transition: all 0.4s
 }
@@ -45,10 +41,10 @@ h4{
     border-color: rgb(187, 187, 187);
     color: rgb(172, 172, 172);
     
+    
     box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.2);
     
 }
-
 
 /*-------------------------------- 
 COMMONS */
@@ -78,17 +74,39 @@ COMMONS */
     gap: 20px;
     width: 100%;
 }
+
 .calc-price-input{
     padding-left: 10px;
     width: 100%;
 
 }
+
 .calc-price-input input{
     border: transparent;
     padding:10px 18px;
 }
 
+/* BG-button */
+.bg-red{
+    background: rgb(199, 30, 30);
+}
 
+.bg-green{
+    background: rgb(18, 121, 37);
+}
+
+.bg-blue{
+    background: rgb(198, 164, 15);
+}
+
+.bg-white{
+    background: white;
+    color: black;
+}
+
+.bg-white:hover{
+    color: black;
+}
 
 /*--------------------------------- 
 Fine Input */
@@ -116,6 +134,10 @@ Fine Input */
     flex-flow: column;
     justify-content: center;
     align-items: stretch;
+}
+
+.ticket-wrapper> h5{
+    color: white;
 }
 
 .ticket{
@@ -187,36 +209,16 @@ Fine Input */
     justify-content: space-around;
     border: 1px solid black;
 }
-/* BG-button */
-.bg-red{
-    background: rgb(199, 30, 30);
-}
 
-.bg-green{
-    background: rgb(18, 121, 37);
-}
-
-.bg-blue{
-    background: rgb(198, 164, 15);
-}
-
-.bg-white{
-    background: white;
-    color: black;
-}
-
-.bg-white:hover{
-    color: black;
+.hidden{
+    overflow: hidden;
 }
 /* ----------------------------------
 Ticket */
 
+
 /* TRAIN 
 ----------------------------------------*/
-.hidden{
-    overflow: hidden;
-}
-
 .train-wrapper{
     position: relative;
     left:0; top:0;
@@ -325,6 +327,10 @@ Ticket */
 .finestrino-vagone-3{
     left:105px;
 }
+/*-------------------------------------------
+ Fine Treno */
+
+
 .info{
     font-size: 0.6em;
     margin: 0;
@@ -341,6 +347,8 @@ Ticket */
     animation: train-animation 10s;
 }
 
+
+/* Animation --------------*/
 @keyframes train-animation{
     0%{
         left:-600px;  
@@ -365,7 +373,7 @@ Ticket */
     }
 }
 
-
+/* Media ------------------*/
 @media screen and (max-width: 600px){
     .container{
         flex-direction: column;
