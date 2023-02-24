@@ -7,6 +7,9 @@ let outputTime = document.getElementById("output-time");
 let btnPrice =  document.getElementById("btn-ticket-price");
 let btnDistance =  document.getElementById("btn-distance");
 let btnTicketGen =  document.getElementById("btn-ticket-generator");
+let btnUndo = document.getElementById("btn-undo");
+
+
 let ticketPrice;
 let ticketTeen;
 let TicketOld;
@@ -90,11 +93,21 @@ btnTicketGen.addEventListener("click", function(){
         train.classList.add("train-animation-class");
         setTimeout(function(){
             train.classList.remove("train-animation-class")
-        }, 5000)
+        }, 6000)
 
     } else {
         output.innerHTML = "Inserisci le informazioni necessarie ed esegui il calcolo del biglietto"
     }
+})
 
+btnUndo.addEventListener("click", function(){
+    nameOutput.innerHTML = "Nome e Cognome";
+    distancePass.innerHTML = "Km";
+    pricePass.innerHTML = "euro";
+    userAge.value = null;
+    userDistance.value = null;
+    userName.value = null;
+    outputTime.innerHTML = "Il tuo viaggio durerà " ;
+    output.innerHTML = `Il tuo biglietto costa`;
 })
 

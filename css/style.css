@@ -5,10 +5,17 @@
 }
 
 h1{
-    padding-left: 10px;
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     margin-bottom: .1em;
     display: inline-block;
+}
+
+.ticket-wrapper> h5{
+    color: white;
+}
+
+h4{
+    color: rgb(173, 11, 37);
 }
 
 .btn{
@@ -98,13 +105,12 @@ Fine Input */
     gap: 3px;
     align-items: center;
     justify-content: center;
-
 }
 
 .container .ticket-wrapper{
     width:60%;
     height: 100%;
-    background: #e1e1e1;
+    background: rgb(173, 11, 37);
     padding: 10px 20px;  
     display: flex;
     flex-flow: column;
@@ -117,21 +123,69 @@ Fine Input */
     flex-flow: column;
     gap: 10px;
 
-    height: 30%;
+    max-width: 800px;
+    height: 280px;
     margin-top:1em;
 
     background: white;
-    padding: 10px;
+    padding: 8px 25px;
+    position: relative;
+}
+
+.ticket-decoration{
+    background: rgb(173, 11, 37);
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width: 30px; height: 30px;
+}
+
+.ticket-decoration:nth-of-type(1){
+    left:-15px
+}
+
+.ticket-decoration:nth-of-type(2){
+    right:-15px
 }
 
 .name-pass-wrapper{
     display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.travel-distance{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.distance-wrapper{
+    display: flex;
     flex-flow: column;
+}
+
+.travel-cost{
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+
+.price-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.pass-inner{
+    display: flex;
+    flex-direction: column;
 }
 
 .info-container{
     display: flex;
     justify-content: space-around;
+    border: 1px solid black;
 }
 /* BG-button */
 .bg-red{
@@ -146,6 +200,14 @@ Fine Input */
     background: rgb(198, 164, 15);
 }
 
+.bg-white{
+    background: white;
+    color: black;
+}
+
+.bg-white:hover{
+    color: black;
+}
 /* ----------------------------------
 Ticket */
 
@@ -162,7 +224,7 @@ Ticket */
 
 .train{
     position: absolute;
-    top:0px; left:-1000px;
+    bottom:0px; left:-1000px;
 }
 
 /* LOCOMOTIVA */
@@ -178,6 +240,7 @@ Ticket */
     height: 90px;
     background: black;
     border-radius: 10px 60px 20px 10px;
+    animation: carrozza .6s infinite
 }
 
 .finestrino{
@@ -248,6 +311,7 @@ Ticket */
     height: 90px;
     background: black;
     border-radius: 10px 10px 10px 10px;
+    animation: carrozza .5s infinite ;
 }
 
 .finestrino-vagone-1{
@@ -261,6 +325,17 @@ Ticket */
 .finestrino-vagone-3{
     left:105px;
 }
+.info{
+    font-size: 0.6em;
+    margin: 0;
+}
+
+.fa-solid-bg{
+    position: absolute;
+    left:50%; top: 50px;
+    transform: translateX(-50%);
+    font-size: 5em;
+}
 
 .train-animation-class{
     animation: train-animation 10s;
@@ -273,6 +348,20 @@ Ticket */
 
     100%{
         left:1000px;
+    }
+}
+
+@keyframes carrozza{
+    0%{
+        top:40px;
+    }
+
+    50%{
+        top:38px;
+    }
+
+    100%{
+        top:40px;
     }
 }
 

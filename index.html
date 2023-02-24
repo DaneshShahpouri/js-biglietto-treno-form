@@ -22,8 +22,6 @@
             <div class="logo">
 
                 <img id="logo" src="img/logo.jpg" alt="logo">
-    
-                <h1>Il tuo Biglietto:</h1>
 
             </div>
     
@@ -45,6 +43,8 @@
                 <input id="btn-distance" type="button" class="btn bg-green" value="Calcola il tempo del viaggio">
     
                 <input id="btn-ticket-generator" type="button" class="btn bg-blue" value="Stampa Biglietto">
+
+                <input id="btn-undo" type="button" class="btn bg-white" value="Annulla">
     
             </div>
         
@@ -53,40 +53,60 @@
 
         <div class="ticket-wrapper">
 
+            <h1>Il tuo Biglietto:</h1>
+
             <h5 id="output">Il tuo biglietto costa</h5>
             <h5 id="output-time">Il tuo viaggio durerà</h5>
 
             <div class="ticket hidden">
 
-                <h2>Dettagli Biglietto</h2>
+                <div class="ticket-decoration"></div>
+                <div class="ticket-decoration"></div>
+
+                <div class="text-wrapper">
+                    <h2>Dettagli Biglietto</h2>
+                    <span class="info">Prima di stampare il biglietto è necessario effettuare il calcolo del prezzo!</span>
+                </div>
 
                 <div class="info-container">
 
                     <div class="name-pass-wrapper">
-    
-                        <h5>Nome Passeggero:</h5>
-                        <h4 id="name-pass"></h4>
-    
+                        <i class="fa-solid fa-user"></i>
+                        <div class="pass-inner">
+                            <h5>Nome Passeggero:</h5>
+                            <h4 id="name-pass">Nome e Cognome</h4>
+                        </div>
                     </div>
 
 
                     <div class="travel-distance">
 
-                        <h6>Distanza</h6>
-                        <h4 id="distance-pass"></h4>
+                        <i class="fa-solid fa-train"></i>
+                        <div class="distance-wrapper">
+                            <h6>Distanza</h6>
+                            <h4 id="distance-pass">Km</h4>
+                        </div>
 
                     </div>
 
                     <div class="travel-cost">
 
-                        <h5>Costo</h5>
-                        <h4 id="price-pass"></h4>
+                        <i class="fa-solid fa-euro-sign"></i>
+
+                        <div class="price-wrapper">
+                            
+                            <h5>Costo</h5>
+                            <h4 id="price-pass">euro</h4>
+
+                        </div>
 
                     </div>
 
                 </div>
   
                 <div class="train-wrapper">
+
+                    <i class="fa-solid-bg fa-solid fa-mountain-sun"></i>
 
                     <div id="train" class="train">
 
